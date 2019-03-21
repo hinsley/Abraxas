@@ -18,18 +18,18 @@ class AbraxasCPU
 struct CPURegistry
 {
     // Accumulator register.
-    public Register a;
-    public Register b;
-    public Register c;
-    public Register x;
-    public Register y;
-    public Register z;
-    public Register i;
-    public Register j;
+    public Register8Bit a;
+    public Register8Bit b;
+    public Register8Bit c;
+    public Register8Bit x;
+    public Register8Bit y;
+    public Register8Bit z;
+    public Register8Bit i;
+    public Register8Bit j;
     // Program counter register.
-    public Register pc;
+    public Register16Bit pc;
     // Stack pointer register.
-    public Register sp;
+    public Register16Bit sp;
 }
 
 struct CPUFlags
@@ -56,9 +56,16 @@ struct RAM
     }
 }
 
-struct Register
+struct Register8Bit
 {
     // 8-bit identifier via which the register is addressed in CPU instructions.
     public byte identifier;
     public byte value;
+}
+
+struct Register16Bit
+{
+    // 8-bit identifier via which the register is addressed in CPU instructions.
+    public byte identifier;
+    public short value;
 }
