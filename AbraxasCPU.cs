@@ -3,16 +3,32 @@ class AbraxasCPU
     CPUFlags flags;
     CPURegistry registry;
     RAM memory;
-    
+
+    public AbraxasCPU(ushort ram_size)
+    {
+        flags = new CPUFlags();
+        memory = new RAM(size);
+        registry = new CPURegistry();
+    }
+
     public void Step()
     {
 
     }
+}
 
-    void CreateRAM(ushort size)
-    {
-        memory = new RAM(size);
-    }
+struct CPUFlags
+{
+    // Sign flag register.
+    public Register1Bit s;
+    // Zero flag register.
+    public Register1Bit z;
+    // Parity flag register.
+    public Register1Bit p;
+    // Carry flag register.
+    public Register1Bit c;
+    // Auxiliary Carry flag register -- used for Binary-Coded Decimal arithmetic (BCD).
+    public Register1Bit h;
 }
 
 struct CPURegistry
@@ -32,20 +48,6 @@ struct CPURegistry
     public Register16Bit sp;
 }
 
-struct CPUFlags
-{
-    // Sign flag register.
-    public bool s;
-    // Zero flag register.
-    public bool z;
-    // Parity flag register.
-    public bool p;
-    // Carry flag register.
-    public bool c;
-    // Auxiliary Carry flag register -- used for Binary-Coded Decimal arithmetic (BCD).
-    public bool h;
-}
-
 struct RAM
 {
     public byte[] value;
@@ -56,11 +58,28 @@ struct RAM
     }
 }
 
+struct Register1Bit
+{
+    // 8-bit identifier via which the register is addressed in CPU instructions.
+    public byte identifier;
+    public bool value;
+
+    public Register1Bit()
+    {
+        value = false;
+    }
+}
+
 struct Register8Bit
 {
     // 8-bit identifier via which the register is addressed in CPU instructions.
     public byte identifier;
     public byte value;
+
+    public Register8Bit()
+    {
+        value = 0x00;
+    }
 }
 
 struct Register16Bit
@@ -68,4 +87,9 @@ struct Register16Bit
     // 8-bit identifier via which the register is addressed in CPU instructions.
     public byte identifier;
     public short value;
+
+    public Register16Bit()
+    {
+        value = 0x0000;
+    }
 }
