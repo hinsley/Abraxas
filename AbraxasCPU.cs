@@ -13,7 +13,7 @@ class AbraxasCPU
 
     public void Step()
     {
-        ExecuteInstruction(GetRAMValue(registry.sp.value));
+        ExecuteInstruction(GetRAMValue(registry.sp.value++));
     }
 
     void ExecuteInstruction(byte instruction)
