@@ -13,12 +13,12 @@ class AbraxasCPU
 
     public void Step()
     {
-        ExecuteInstruction(GetRAMValue(registry.sp.value++));
+        ExecuteInstruction(registry.sp.value++);
     }
 
-    void ExecuteInstruction(byte instruction)
+    void ExecuteInstruction(ushort instructionLocation)
     {
-        switch (instruction)
+        switch (GetRAMValue(instructionLocation))
         {
             case 0x01: // SET b, a
                 break;
