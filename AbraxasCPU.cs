@@ -15,6 +15,16 @@ class AbraxasCPU
     {
 
     }
+
+    void ExecuteInstruction(byte instruction)
+    {
+
+    }
+
+    byte GetRAMValue(ushort address)
+    {
+        return memory.value[address];
+    }
 }
 
 struct CPUFlags
