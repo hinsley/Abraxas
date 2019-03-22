@@ -13,12 +13,24 @@ class AbraxasCPU
 
     public void Step()
     {
-
+        ExecuteInstruction(GetRAMValue(registry.sp.value));
     }
 
     void ExecuteInstruction(byte instruction)
     {
-
+        switch (instruction)
+        {
+            case 0x01: // SET b, a
+                break;
+            case 0x02: // ADD b, a
+                break;
+            case 0x03: // SUB b, a
+                break;
+            case 0x04: // MUL b, a
+                break;
+            case 0x05: // MLI b, a
+                break;
+        }
     }
 
     byte GetRAMValue(ushort address)
@@ -35,8 +47,6 @@ struct CPUFlags
     public Register1Bit z;
     // Parity flag register.
     public Register1Bit p;
-    // Carry flag register.
-    public Register1Bit c;
     // Auxiliary Carry flag register -- used for Binary-Coded Decimal arithmetic (BCD).
     public Register1Bit h;
 }
@@ -52,6 +62,8 @@ struct CPURegistry
     public Register8Bit z;
     public Register8Bit i;
     public Register8Bit j;
+    // Excess register.
+    public Register16Bit ex;
     // Program counter register.
     public Register16Bit pc;
     // Stack pointer register.
