@@ -9,6 +9,6 @@
   - [ ] Grassy terrain
   - [ ] Desert terrain
   - [ ] Snowy terrain
-- [ ] Spaceships w/ interiors (see /docs/design/spacecrafts.md)
+- [ ] Spaceships w/ interiors (see [spacecrafts.md](../design/spacecrafts.md))
 - [ ] Thrusters for spaceships (w/ 90 degree rotation in 2 axes)
 - [ ] Radio antenna
