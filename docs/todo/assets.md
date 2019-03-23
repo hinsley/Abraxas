@@ -10,4 +10,5 @@
   - [ ] Desert terrain
   - [ ] Snowy terrain
 - [ ] Spaceships w/ interiors (see /docs/design/spacecrafts.md)
+- [ ] Thrusters for spaceships (w/ 90 degree rotation in 2 axes)
 - [ ] Radio antenna
