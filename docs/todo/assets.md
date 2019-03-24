@@ -1,9 +1,23 @@
 # Assets: To Do
 
-- [ ] Tree models (1-3)
+- [X] Tree model (1) - Low_Poly_Tree_Animation_001
+  - [X] Textures
+  - [X] Animations
+- [X] Tree model (2) - Low_Poly_Tree_Fir_Animation_001
+  - [X] Textures
+  - [X] Animations
+- [ ] Tree model (3)
   - [ ] Textures
   - [ ] Animations
-- [ ] Rock/crag models (2-5)
+- [X] Rock/crag models (1) - Rock_Big_LP_001
+  - [X] Textures
+- [X] Rock/crag models (2) - Rock_LP_001
+  - [X] Textures
+- [X] Rock/crag models (3) - Rock_Small_LP_001
+  - [X] Textures
+- [ ] Rock/crag models (4)
+  - [ ] Textures
+- [ ] Rock/crag models (5)
   - [ ] Textures
 - [ ] Terrain textures (?)
   - [ ] Grassy terrain
