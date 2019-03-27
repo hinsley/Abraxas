@@ -18,7 +18,7 @@ class AbraxasCPU
 
     void ExecuteInstruction(ushort instructionLocation)
     {
-        switch (GetRAMValue(instructionLocation) & 0b0000000000011111) // Masking isolates the opcode.
+        switch (GetRAMValue(instructionLocation) & 0x20) // Masking isolates the opcode. 0x20 isolates smallest 5 bits.
         {
             case 0x01: // SET b, a
                 break;
